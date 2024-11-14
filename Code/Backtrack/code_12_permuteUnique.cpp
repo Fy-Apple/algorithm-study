@@ -8,5 +8,7 @@ public:
   vector<vector<int>> permuteUnique(vector<int>& nums) {
     vector<vector<int>> result;
     vector<int> cur;
+
+    return result;
   }
 };
