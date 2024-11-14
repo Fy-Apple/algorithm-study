@@ -3,9 +3,9 @@
 //
 #include "code_0_header.h"
 
+// 78. 子集
 class Solution {
 public:
-  // 78. 子集
   vector<vector<int>> subsets1(vector<int>& nums) {
     vector<vector<int>> result;
     vector<int> cur;
@@ -37,12 +37,4 @@ public:
     }
     return result;
   }
-
-  vector<vector<int>> subsets2(vector<int>& nums) {
-
-
-    return result;
-  }
-
-
 };

@@ -6,7 +6,7 @@ using namespace std;
 
 
 
-
+// 替换数字 非lc
 int main(int agrc, char* argv[]) {
   string s;
   cin >> s;

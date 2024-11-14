@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 using namespace std;
+
+// 28. 实现 strStr()
 class Solution {
 public:
   int strStr(string haystack, string needle) {

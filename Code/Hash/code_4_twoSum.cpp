@@ -5,6 +5,7 @@
 #include <vector>
 using namespace std;
 
+// 1. 两数之和
 class Solution {
 public:
   vector<int> twoSum(vector<int>& nums, int target) {

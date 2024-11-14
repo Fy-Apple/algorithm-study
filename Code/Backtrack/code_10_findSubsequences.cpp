@@ -1,13 +1,14 @@
 //
 // Created by Orange on 2024/11/14.
 //
+#include <set>
 #include <unordered_map>
 
 #include "code_0_header.h"
 
+// 491. 非递减子序列
 class Solution {
 public:
-  // 491. 非递减子序列
   vector<vector<int>> findSubsequences2(vector<int>& nums) {
     vector<vector<int>> result;
     vector<int> cur;
@@ -32,23 +33,39 @@ public:
   }
   // 枚举
   vector<vector<int>> findSubsequences(vector<int>& nums) {
-    vector<vector<int>> result;
-    vector<int> cur;
-    for (int i = 0; i < nums.size() - 1; ++i) {
-      vector<vector<int>> temp;
-      for (int j = i + 1; j < nums.size(); ++j) {
-        const auto len = temp.size();
-        for (auto k = 0; k < len; ++k) {
-          if (nums[j] >= temp[k].back()) {
-            vector<int> vec = temp[k];
-            vec.emplace_back(nums[j]);
-            temp.emplace_back(vec);
-          }
-          if (nums[j] >= nums[i]) temp.push_back({nums[i], nums[j]});
+        vector<vector<int>> result;
+        vector<vector<int>> temp;
+
+        // 遍历 nums
+        for (int i = 0; i < nums.size(); ++i) {
+            vector<vector<int>> newTemp;
+
+            // 扩展已有的子序列
+            for (auto& seq : temp) {
+                if (nums[i] >= seq.back()) {
+                    vector<int> newSeq = seq;
+                    newSeq.push_back(nums[i]); // 将 nums[i] 加入当前子序列
+                    newTemp.push_back(newSeq);
+                }
+            }
+
+            // nums[i] 单独作为一个新的子序列起始
+            newTemp.push_back({nums[i]});
+
+            // 合并已有的 temp 和新生成的序列
+            temp.insert(temp.end(), newTemp.begin(), newTemp.end());
         }
-      }
-      result.insert(result.end(), temp.begin(), temp.end());
+
+        // 去重：使用 set 保证子序列唯一
+        set<vector<int>> uniqueSequences(temp.begin(), temp.end());
+
+        // 过滤掉长度小于 2 的子序列
+        for (auto& seq : uniqueSequences) {
+            if (seq.size() >= 2) {
+                result.push_back(seq);
+            }
+        }
+
+        return result;
     }
-    return result;
-  }
 };

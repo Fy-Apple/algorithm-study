@@ -7,7 +7,7 @@
 using namespace std;
 
 
-
+// 右旋字符串 非lc
 int main(int argc, char* argv[]) {
   int k;
   string s;

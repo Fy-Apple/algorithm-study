@@ -5,7 +5,7 @@
 
 #include "code_0_linklist.h"
 
-
+// 707.设计链表
 class MyLinkedList {
 private:
   ListNode *head, *tail;

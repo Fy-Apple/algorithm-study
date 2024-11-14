@@ -4,6 +4,7 @@
 #include <stack>
 #include <vector>
 using namespace std;
+// 232.用栈实现队列
 class MyQueue {
 private:
   stack<int> s1, s2;

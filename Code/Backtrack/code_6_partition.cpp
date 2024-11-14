@@ -2,10 +2,9 @@
 // Created by Orange on 2024/11/14.
 //
 #include "code_0_header.h"
-
+// 131.分割回文串
 class Solution {
 public:
-  //131. 分割回文串
   vector<vector<string>> partition(string s) {
     vector<vector<string>> result;
     vector<string> cur;

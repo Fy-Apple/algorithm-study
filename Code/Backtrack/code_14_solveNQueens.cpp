@@ -2,6 +2,7 @@
 // Created by orange on 11/14/24.
 //
 #include "code_0_header.h"
+// 51. N皇后
 class Solution {
 private:
   vector<bool> col;

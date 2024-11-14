@@ -5,7 +5,7 @@
 #include <stack>
 #include <vector>
 using namespace std;
-
+// 225. 用队列实现栈
 class MyStack {
 private:
   queue<int> q1, q2;

@@ -5,6 +5,7 @@
 #include <vector>
 using namespace std;
 
+// 349. 两个数组的交集
 class Solution {
 public:
   vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {

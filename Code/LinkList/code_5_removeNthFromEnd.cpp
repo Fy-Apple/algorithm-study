@@ -2,6 +2,8 @@
 // Created by orange on 11/10/24.
 //
 #include "code_0_linklist.h"
+
+// 19.删除链表的倒数第N个节点
 class Solution {
 public:
   ListNode* removeNthFromEnd(ListNode* head, int n) {

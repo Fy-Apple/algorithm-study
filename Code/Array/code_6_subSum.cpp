@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-
+// 区间和  非lc
 int main(int argc, char* argv[]) {
   int n;
   cin >> n;

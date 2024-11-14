@@ -6,9 +6,9 @@
 
 #include "code_0_header.h"
 
+// 39. 组合总和
 class Solution {
 public:
-  // 39. 组合总和
   vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
     vector<vector<int>> result;
     vector<int> cur;

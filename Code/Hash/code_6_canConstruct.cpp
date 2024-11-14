@@ -5,6 +5,7 @@
 #include <string>
 using namespace std;
 
+// 383. 赎金信
 class Solution {
 public:
   bool canConstruct(string ransomNote, string magazine) {

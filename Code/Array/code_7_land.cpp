@@ -5,6 +5,7 @@
 #include <vector>
 using namespace std;
 
+//  开发商购买土地   非lc
 int main(int argc, char* argv[]) {
   int n, m;
   cin >> n >> m;
