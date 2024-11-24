@@ -6,6 +6,15 @@
 class Solution {
 public:
   int integerBreak(int n) {
-        
+    vector<int> dp(n + 1, 0);
+    dp[1] = 1;
+    for (int i = 2; i <= n; ++i) {
+      int maxNum = i - 1;
+      for (int j = 2; j < i; ++j) {
+        maxNum = max(maxNum, max(j * (i - j), j * dp[i - j]));
+      }
+      dp[i] = maxNum;
+    }
+    return dp[n];
   }
 };
